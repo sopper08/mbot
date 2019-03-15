@@ -1,0 +1,8 @@
+prefix=/home/sopper08/TMP/mbot/devel
+
+Name: model
+Description: Description of model
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/sopper08/TMP/mbot/devel/lib 
+Requires: 
