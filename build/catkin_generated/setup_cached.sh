@@ -7,8 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/sopper08/TMP/mbot/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/sopper08/TMP/mbot/devel/lib:$LD_LIBRARY_PATH"
-export PWD="/home/sopper08/TMP/mbot/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/sopper08/TMP/mbot/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/sopper08/TMP/mbot/src:$ROS_PACKAGE_PATH"
+export LD_LIBRARY_PATH="/home/sopper08/TMP/catkin_ws/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu"
+export PKG_CONFIG_PATH="/home/sopper08/TMP/catkin_ws/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig"
+export PWD="/home/sopper08/sopProjects/MASTERTHESIS/mbot/build"
+export ROS_PACKAGE_PATH="/home/sopper08/TMP/catkin_ws/src:/home/sopper08/sopProjects/MASTERTHESIS/mbot/src:/opt/ros/kinetic/share"

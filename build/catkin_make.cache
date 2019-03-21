@@ -1,2 +1,2 @@
 model
--DCATKIN_DEVEL_PREFIX=/home/sopper08/TMP/mbot/devel -DCMAKE_INSTALL_PREFIX=/home/sopper08/TMP/mbot/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/sopper08/sopProjects/MASTERTHESIS/mbot/devel -DCMAKE_INSTALL_PREFIX=/home/sopper08/sopProjects/MASTERTHESIS/mbot/install -G Unix Makefiles

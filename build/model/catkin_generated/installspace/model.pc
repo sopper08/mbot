@@ -1,8 +1,8 @@
-prefix=/home/sopper08/TMP/mbot/install
+prefix=/home/sopper08/sopProjects/MASTERTHESIS/mbot/install
 
 Name: model
 Description: Description of model
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/sopper08/TMP/mbot/install/lib 
+Libs: -L/home/sopper08/sopProjects/MASTERTHESIS/mbot/install/lib 
 Requires: 

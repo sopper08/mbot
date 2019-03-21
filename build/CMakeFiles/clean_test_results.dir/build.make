@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sopper08/TMP/mbot/src
+CMAKE_SOURCE_DIR = /home/sopper08/sopProjects/MASTERTHESIS/mbot/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sopper08/TMP/mbot/build
+CMAKE_BINARY_DIR = /home/sopper08/sopProjects/MASTERTHESIS/mbot/build
 
 # Utility rule file for clean_test_results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/sopper08/TMP/mbot/build
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/remove_test_results.py /home/sopper08/TMP/mbot/build/test_results
+	/usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/remove_test_results.py /home/sopper08/sopProjects/MASTERTHESIS/mbot/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/sopper08/TMP/mbot/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sopper08/TMP/mbot/src /home/sopper08/TMP/mbot/src /home/sopper08/TMP/mbot/build /home/sopper08/TMP/mbot/build /home/sopper08/TMP/mbot/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sopper08/sopProjects/MASTERTHESIS/mbot/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sopper08/sopProjects/MASTERTHESIS/mbot/src /home/sopper08/sopProjects/MASTERTHESIS/mbot/src /home/sopper08/sopProjects/MASTERTHESIS/mbot/build /home/sopper08/sopProjects/MASTERTHESIS/mbot/build /home/sopper08/sopProjects/MASTERTHESIS/mbot/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

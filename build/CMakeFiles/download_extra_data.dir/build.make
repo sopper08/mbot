@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sopper08/TMP/mbot/src
+CMAKE_SOURCE_DIR = /home/sopper08/sopProjects/MASTERTHESIS/mbot/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sopper08/TMP/mbot/build
+CMAKE_BINARY_DIR = /home/sopper08/sopProjects/MASTERTHESIS/mbot/build
 
 # Utility rule file for download_extra_data.
 
@@ -67,6 +67,6 @@ CMakeFiles/download_extra_data.dir/clean:
 .PHONY : CMakeFiles/download_extra_data.dir/clean
 
 CMakeFiles/download_extra_data.dir/depend:
-	cd /home/sopper08/TMP/mbot/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sopper08/TMP/mbot/src /home/sopper08/TMP/mbot/src /home/sopper08/TMP/mbot/build /home/sopper08/TMP/mbot/build /home/sopper08/TMP/mbot/build/CMakeFiles/download_extra_data.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sopper08/sopProjects/MASTERTHESIS/mbot/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sopper08/sopProjects/MASTERTHESIS/mbot/src /home/sopper08/sopProjects/MASTERTHESIS/mbot/src /home/sopper08/sopProjects/MASTERTHESIS/mbot/build /home/sopper08/sopProjects/MASTERTHESIS/mbot/build /home/sopper08/sopProjects/MASTERTHESIS/mbot/build/CMakeFiles/download_extra_data.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/download_extra_data.dir/depend
 
