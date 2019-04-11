@@ -22,9 +22,11 @@
     value="$(find model)/urdf/mbotModel.urdf" 
     type="str"/> -->
 
+  <param name="mbot_description"
+         command="$(find xacro)/xacro --inorder '$(find model)/urdf/mbotModel.xacro'" />
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-    args="-urdf -model desk1 -urdf -file $(find model)/urdf/mbotModel.urdf"/> 
+    args="-urdf -model mbot -param mbot_description"/> 
 
   <!-- ros_control rrbot launch file -->
   <!--include file="$(find rrbot_control)/launch/rrbot_control.launch" /-->

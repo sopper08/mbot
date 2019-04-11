@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
-<robot name="mbot">
+<robot name="mbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find model)/urdf/mbotModel.gazebo" />
+
   <material name="black">
     <color rgba="0 0 0 1"/>
   </material>
@@ -13,7 +16,6 @@
   <link name="base_link">
     <visual>
       <geometry>
-        <!-- <mesh filename="file:///home/sopper08/TMP/mbot/src/model/meshes/body.stl"/> -->
         <mesh filename="package://model/meshes/dashgoD1_body.stl"/>
       </geometry>
       <origin rpy="0 3.1415 1.57075" xyz="0.203 0.203 0.196 "/>
