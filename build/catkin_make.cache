@@ -1,2 +1,2 @@
-model
+mbot_control:mbot_controller:mbot_controller_test:model
 -DCATKIN_DEVEL_PREFIX=/home/sopper08/sopProjects/MASTERTHESIS/mbot/devel -DCMAKE_INSTALL_PREFIX=/home/sopper08/sopProjects/MASTERTHESIS/mbot/install -G Unix Makefiles

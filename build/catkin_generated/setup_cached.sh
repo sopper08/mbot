@@ -7,7 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH="/home/sopper08/TMP/catkin_ws/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu"
-export PKG_CONFIG_PATH="/home/sopper08/TMP/catkin_ws/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig"
 export PWD="/home/sopper08/sopProjects/MASTERTHESIS/mbot/build"
-export ROS_PACKAGE_PATH="/home/sopper08/TMP/catkin_ws/src:/home/sopper08/sopProjects/MASTERTHESIS/mbot/src:/opt/ros/kinetic/share"

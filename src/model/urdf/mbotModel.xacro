@@ -1,14 +1,18 @@
 <?xml version="1.0"?>
 <robot name="mbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+  <!-- Gazebo: Color & Sensor -->
   <xacro:include filename="$(find model)/urdf/mbotModel.gazebo" />
 
+  <!-- COLOR -->
   <material name="black">
     <color rgba="0 0 0 1"/>
   </material>
+  
   <material name="gray">
     <color rgba="0.609 0.633 0.634 1.0"/>
   </material>
+
   <material name="white">
     <color rgba="1.0 1.0 1.0 1.0"/>
   </material>
@@ -32,6 +36,7 @@
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
+  
   <link name="left_leg">
     <visual>
       <geometry>
@@ -51,7 +56,8 @@
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
-    <link name="right_leg">
+  
+  <link name="right_leg">
     <visual>
       <geometry>
         <cylinder length="0.035" radius="0.0625"/>
@@ -70,6 +76,7 @@
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
+  
   <link name="front_support_of_steering_wheel_frame">
     <visual>
       <geometry>
@@ -89,6 +96,7 @@
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
+  
   <link name="back_support_of_steering_wheel_frame">
     <visual>
       <geometry>
@@ -108,6 +116,7 @@
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
+  
   <link name="front_steering_wheel_frame">
     <visual>
       <geometry>
@@ -126,6 +135,7 @@
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
+  
   <link name="back_steering_wheel_frame">
     <visual>
       <geometry>
@@ -144,6 +154,7 @@
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
+  
   <link name="front_steering_wheel">
     <visual>
       <geometry>
@@ -163,6 +174,7 @@
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
+  
   <link name="back_steering_wheel">
     <visual>
       <geometry>
@@ -182,6 +194,7 @@
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
+  
   <link name="laser_frame">
     <visual>
       <geometry>
@@ -200,6 +213,7 @@
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
+  
   <link name="laser_sensor">
     <visual>
       <geometry>
@@ -224,49 +238,59 @@
     <child link="left_leg"/>
     <origin xyz="0 0 0.0625"/>
   </joint>
+  
   <joint name="base_link_to_right_leg" type="continuous">
     <parent link="base_link"/>
     <child link="right_leg"/>
     <origin xyz="0 0 0.0625"/>
   </joint>
+  
   <joint name="base_link_to_front_support_of_steering_wheel_frame" type="fixed">
     <parent link="base_link"/>
     <child link="front_support_of_steering_wheel_frame"/>
     <origin xyz="0 -0.130 0.038"/>
   </joint>
+  
   <joint name="base_link_to_back_support_of_steering_wheel_frame" type="fixed">
     <parent link="base_link"/>
     <child link="back_support_of_steering_wheel_frame"/>
     <origin xyz="0 0.130 0.038"/>
   </joint>
+  
   <joint name="front_support_to_front_steering_wheel_frame" type="fixed">
     <parent link="front_support_of_steering_wheel_frame"/>
     <child link="front_steering_wheel_frame"/>
     <origin xyz="0 0 0"/>
   </joint>
+  
   <joint name="back_support_to_front_steering_wheel_frame" type="fixed">
     <parent link="back_support_of_steering_wheel_frame"/>
     <child link="back_steering_wheel_frame"/>
     <origin xyz="0 0 0"/>
   </joint>
+  
   <joint name="front_steering_wheel_frame_to_wheel" type="continuous">
     <parent link="front_steering_wheel_frame"/>
     <child link="front_steering_wheel"/>
     <origin xyz="0.0 -0.005 -0.0255"/>
   </joint>
+  
   <joint name="back_steering_wheel_frame_to_wheel" type="continuous">
     <parent link="back_steering_wheel_frame"/>
     <child link="back_steering_wheel"/>
     <origin xyz="0.0 -0.005 -0.0255"/>
   </joint>
+  
   <joint name="base_link_to_laser_frame" type="fixed">
     <parent link="base_link"/>
     <child link="laser_frame"/>
     <origin xyz="0 0 0.226"/>
   </joint>
+  
   <joint name="laser_frame_to_laser_sensor" type="fixed">
     <parent link="laser_frame"/>
     <child link="laser_sensor"/>
     <origin xyz="0.0 0.0 0.010"/>
   </joint>
+c
 </robot>
