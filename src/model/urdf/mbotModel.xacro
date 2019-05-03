@@ -3,7 +3,7 @@
 
   <!-- Gazebo: Color & Sensor -->
   <xacro:include filename="$(find model)/urdf/mbotModel.gazebo" />
-
+  
   <!-- COLOR -->
   <material name="black">
     <color rgba="0 0 0 1"/>
@@ -17,6 +17,8 @@
     <color rgba="1.0 1.0 1.0 1.0"/>
   </material>
 
+  <!-- links -->
+  <link name="dummy"></link>
   <link name="base_link">
     <visual>
       <geometry>
@@ -233,16 +235,25 @@
     </inertial>
   </link>
 
-  <joint name="base_link_to_left_leg" type="continuous">
+  <!-- joints -->
+  <joint name="dummy_joint" type="fixed">
+     <parent link="dummy"/>
+     <child link="base_link"/>
+   </joint>
+  <joint name="left_motor" type="continuous">
     <parent link="base_link"/>
     <child link="left_leg"/>
-    <origin xyz="0 0 0.0625"/>
+    <origin xyz="0 0 0.0625" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.7"/>
   </joint>
   
-  <joint name="base_link_to_right_leg" type="continuous">
+  <joint name="right_motor" type="continuous">
     <parent link="base_link"/>
     <child link="right_leg"/>
-    <origin xyz="0 0 0.0625"/>
+    <origin xyz="0 0 0.0625" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.7"/>
   </joint>
   
   <joint name="base_link_to_front_support_of_steering_wheel_frame" type="fixed">
@@ -292,5 +303,27 @@
     <child link="laser_sensor"/>
     <origin xyz="0.0 0.0 0.010"/>
   </joint>
-c
+
+  <!-- transmissions -->
+  <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="left_leg">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="right_leg">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
 </robot>
