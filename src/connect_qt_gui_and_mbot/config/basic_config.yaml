@@ -1,0 +1,7 @@
+rospy_init:
+  name: gui_and_mbot_connector
+  anonymous: True
+rospy_subscriber:
+  name: speeds
+movement:
+  max_speed: 10

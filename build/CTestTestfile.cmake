@@ -6,6 +6,7 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
 subdirs(model)
+subdirs(connect_qt_gui_and_mbot)
+subdirs(mbot_movement_control)
+subdirs(mbot_movement_control_qt)
 subdirs(mbot_control)
-subdirs(mbot_controller)
-subdirs(mbot_controller_test)

@@ -1,2 +1,2 @@
-mbot_control:mbot_controller:mbot_controller_test:model
+connect_qt_gui_and_mbot:mbot_control:mbot_movement_control:mbot_movement_control_qt:model
 -DCATKIN_DEVEL_PREFIX=/home/sopper08/sopProjects/MASTERTHESIS/mbot/devel -DCMAKE_INSTALL_PREFIX=/home/sopper08/sopProjects/MASTERTHESIS/mbot/install -G Unix Makefiles

@@ -1,0 +1,2 @@
+int64 speed_of_left_motor
+int64 speed_of_right_motor

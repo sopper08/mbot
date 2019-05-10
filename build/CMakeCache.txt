@@ -235,6 +235,18 @@ Project_BINARY_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/build
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/src
 
+//The directory containing a CMake configuration file for Qt5Core.
+Qt5Core_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core
+
+//The directory containing a CMake configuration file for Qt5Gui.
+Qt5Gui_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui
+
+//The directory containing a CMake configuration file for Qt5Widgets.
+Qt5Widgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets
+
+//The directory containing a CMake configuration file for Qt5.
+Qt5_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
+
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
 
@@ -270,6 +282,12 @@ catkin_DIR:PATH=/opt/ros/kinetic/share/catkin/cmake
 
 //The directory containing a CMake configuration file for class_loader.
 class_loader_DIR:PATH=/opt/ros/kinetic/share/class_loader/cmake
+
+//Value Computed by CMake
+connect_qt_gui_and_mbot_BINARY_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/build/connect_qt_gui_and_mbot
+
+//Value Computed by CMake
+connect_qt_gui_and_mbot_SOURCE_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/src/connect_qt_gui_and_mbot
 
 //The directory containing a CMake configuration file for controller_interface.
 controller_interface_DIR:PATH=/opt/ros/kinetic/share/controller_interface/cmake
@@ -374,6 +392,18 @@ mbot_controller_test_BINARY_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/m
 //Value Computed by CMake
 mbot_controller_test_SOURCE_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/src/mbot_controller_test
 
+//Value Computed by CMake
+mbot_movement_control_BINARY_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/build/mbot_movement_control
+
+//Value Computed by CMake
+mbot_movement_control_SOURCE_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/src/mbot_movement_control
+
+//Value Computed by CMake
+mbot_movement_control_qt_BINARY_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/build/mbot_movement_control_qt
+
+//Value Computed by CMake
+mbot_movement_control_qt_SOURCE_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/src/mbot_movement_control_qt
+
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/kinetic/share/message_filters/cmake
 
@@ -436,6 +466,12 @@ sensor_msgs_DIR:PATH=/opt/ros/kinetic/share/sensor_msgs/cmake
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
+
+//Value Computed by CMake
+test_BINARY_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/build/test
+
+//Value Computed by CMake
+test_SOURCE_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/src/test
 
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/kinetic/share/tf2/cmake
@@ -560,7 +596,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
