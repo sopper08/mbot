@@ -1,4 +1,0 @@
-movement_desigh_parameters:
-  max_speed: 10
-  acc_factor: 0.05
-rospy_rate: 10
