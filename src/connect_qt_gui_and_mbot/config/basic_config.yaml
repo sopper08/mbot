@@ -1,7 +1,8 @@
 rospy_init:
-  name: gui_and_mbot_connector
+  name: 'gui_and_mbot_connector'
   anonymous: True
-rospy_subscriber:
-  name: speeds
-movement:
-  max_speed: 10
+rospy_Publisher:
+  rate: 10
+  name: '/mbot/mobile_base_controller/cmd_vel'
+  queue_size: 10
+  speed_ratio: 50
