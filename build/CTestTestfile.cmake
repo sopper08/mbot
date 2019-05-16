@@ -7,5 +7,7 @@
 subdirs(gtest)
 subdirs(model)
 subdirs(connect_qt_gui_and_mbot)
+subdirs(main)
+subdirs(mbot_gmapping)
 subdirs(mbot_movement_control_qt)
 subdirs(mbot_control)

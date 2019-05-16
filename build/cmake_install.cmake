@@ -119,6 +119,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/sopper08/sopProjects/MASTERTHESIS/mbot/build/gtest/cmake_install.cmake")
   include("/home/sopper08/sopProjects/MASTERTHESIS/mbot/build/model/cmake_install.cmake")
   include("/home/sopper08/sopProjects/MASTERTHESIS/mbot/build/connect_qt_gui_and_mbot/cmake_install.cmake")
+  include("/home/sopper08/sopProjects/MASTERTHESIS/mbot/build/main/cmake_install.cmake")
+  include("/home/sopper08/sopProjects/MASTERTHESIS/mbot/build/mbot_gmapping/cmake_install.cmake")
   include("/home/sopper08/sopProjects/MASTERTHESIS/mbot/build/mbot_movement_control_qt/cmake_install.cmake")
   include("/home/sopper08/sopProjects/MASTERTHESIS/mbot/build/mbot_control/cmake_install.cmake")
 

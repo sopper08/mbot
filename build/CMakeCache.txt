@@ -375,6 +375,12 @@ kdl_parser_DIR:PATH=/opt/ros/kinetic/share/kdl_parser/cmake
 lib:FILEPATH=/opt/ros/kinetic/lib/librosconsole_bridge.so
 
 //Value Computed by CMake
+main_BINARY_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/build/main
+
+//Value Computed by CMake
+main_SOURCE_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/src/main
+
+//Value Computed by CMake
 mbot_control_BINARY_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/build/mbot_control
 
 //Value Computed by CMake
@@ -391,6 +397,12 @@ mbot_controller_test_BINARY_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/m
 
 //Value Computed by CMake
 mbot_controller_test_SOURCE_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/src/mbot_controller_test
+
+//Value Computed by CMake
+mbot_gmapping_BINARY_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/build/mbot_gmapping
+
+//Value Computed by CMake
+mbot_gmapping_SOURCE_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/src/mbot_gmapping
 
 //Value Computed by CMake
 mbot_movement_control_BINARY_DIR:STATIC=/home/sopper08/sopProjects/MASTERTHESIS/mbot/build/mbot_movement_control
@@ -596,7 +608,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

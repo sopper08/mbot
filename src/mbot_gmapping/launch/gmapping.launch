@@ -1,0 +1,6 @@
+<launch>
+  <node name="slam_gmapping" pkg="gmapping" type="slam_gmapping" >
+    <remap from="scan" to="/mbot/laser/scan"/>
+    <param name="base_frame" value="base_link"/>
+  </node>
+</launch>
