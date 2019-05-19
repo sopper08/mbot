@@ -38,7 +38,7 @@ def main(kwargs):
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('config_path', type=str)
-    args = parser.parse_args()
+    args, unknown = parser.parse_known_args()
     return args
 
 if __name__ == '__main__':

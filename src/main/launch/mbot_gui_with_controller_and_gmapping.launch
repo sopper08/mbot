@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find mbot_control)/launch/mbot_control.launch" />
+    <include file="$(find mbot_movement_control_qt)/launch/mbot_gui.launch" />
+    <include file="$(find connect_qt_gui_and_mbot)/launch/mbot_to_qt_connect_layer.launch" />
+    <include file="$(find mbot_gmapping)/launch/gmapping.launch" />
+</launch>

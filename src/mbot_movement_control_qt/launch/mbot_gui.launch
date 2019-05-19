@@ -1,0 +1,5 @@
+<launch>
+    <node name="mbot_movement_control_qt_node" 
+          pkg="mbot_movement_control_qt" 
+          type="mbot_movement_control_qt_node" />
+</launch>

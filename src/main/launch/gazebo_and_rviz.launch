@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find model)/launch/world.launch" />
+  <include file="$(find model)/launch/mbot_rviz.launch" />
+</launch>

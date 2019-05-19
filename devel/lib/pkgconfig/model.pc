@@ -1,8 +1,0 @@
-prefix=/home/sopper08/sopProjects/MASTERTHESIS/mbot/devel
-
-Name: model
-Description: Description of model
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/sopper08/sopProjects/MASTERTHESIS/mbot/devel/lib 
-Requires: 

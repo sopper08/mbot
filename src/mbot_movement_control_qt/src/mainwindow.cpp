@@ -20,6 +20,7 @@ void MainWindow::init(){
     /* init_parameters */
     acc = 1;
     ang_acc = 1;
+    display_and_pub_speeds();
     /* init_icon */
     setIcon(ui->pushButton_up, tr("/home/sopper08/icon/up-arrow.png"));
     setIcon(ui->pushButton_down, tr("/home/sopper08/icon/down-arrow.png"));
