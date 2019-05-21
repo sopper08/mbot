@@ -7,25 +7,23 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     init();
-    connect(ui->verticalSlider_left,SIGNAL(valueChanged(int)),this,SLOT(update_left_speed(int)));
-    connect(ui->verticalSlider_right,SIGNAL(valueChanged(int)),this,SLOT(update_right_speed(int)));
 
     connect(ui->pushButton_up, SIGNAL(clicked()), this, SLOT(button_up()));
     connect(ui->pushButton_down, SIGNAL(clicked()), this, SLOT(button_down()));
     connect(ui->pushButton_right, SIGNAL(clicked()), this, SLOT(button_right()));
     connect(ui->pushButton_left, SIGNAL(clicked()), this, SLOT(button_left()));
+    connect(ui->pushButton_stop, SIGNAL(clicked()), this, SLOT(button_stop()));
 }
 
 void MainWindow::init(){
     /* init_parameters */
-    acc = 1;
-    ang_acc = 1;
     display_and_pub_speeds();
     /* init_icon */
     setIcon(ui->pushButton_up, tr("/home/sopper08/icon/up-arrow.png"));
     setIcon(ui->pushButton_down, tr("/home/sopper08/icon/down-arrow.png"));
     setIcon(ui->pushButton_right, tr("/home/sopper08/icon/forward.png"));
     setIcon(ui->pushButton_left, tr("/home/sopper08/icon/back.png"));
+    setIcon(ui->pushButton_stop, tr("/home/sopper08/icon/stop.png"));
 }
 
 void MainWindow::setIcon(QPushButton* btn, QString img_path){
@@ -35,31 +33,29 @@ void MainWindow::setIcon(QPushButton* btn, QString img_path){
     btn->setIconSize(btn->size()*0.8);
 }
 
-void MainWindow::update_left_speed(int speed){
-    ui->lcdNumber_left->display(speed);
-}
-
-void MainWindow::update_right_speed(int speed){
-    ui->lcdNumber_right->display(speed);
-}
-
 void MainWindow::button_up(){
-    linear_x += acc;
+    linear_x += 1;
     display_and_pub_speeds();
 }
 
 void MainWindow::button_down(){
-    linear_x -= acc;
+    linear_x -= 1;
     display_and_pub_speeds();
 }
 
 void MainWindow::button_right(){
-    angular_z += ang_acc;
+    angular_z += 1;
     display_and_pub_speeds();
 }
 
 void MainWindow::button_left(){
-    angular_z -= ang_acc;
+    angular_z -= 1;
+    display_and_pub_speeds();
+}
+
+void MainWindow::button_stop(){
+    linear_x = 0;
+    angular_z = 0;
     display_and_pub_speeds();
 }
 

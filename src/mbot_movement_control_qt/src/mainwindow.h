@@ -27,21 +27,19 @@ public:
     ~MainWindow();
 
 private slots:
-    void update_left_speed(int);
-    void update_right_speed(int);
-
     void button_up();
     void button_down();
     void button_right();
     void button_left();
+    void button_stop();
 
 private:
     Ui::MainWindow *ui;
     void init();
+
     void setIcon(QPushButton*, QString);
     ros::NodeHandle nh; /* ros NodeHandle */
-    int acc;
-    int ang_acc;
+
     void display_and_pub_speeds();
 };
 

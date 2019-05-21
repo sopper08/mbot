@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>793</width>
-    <height>499</height>
+    <width>470</width>
+    <height>431</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,109 +18,13 @@
     <normaloff>../img/up-arrow.png</normaloff>../img/up-arrow.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="frame_left">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>100</width>
-      <height>350</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QSlider" name="verticalSlider_left">
-     <property name="geometry">
-      <rect>
-       <x>25</x>
-       <y>80</y>
-       <width>50</width>
-       <height>250</height>
-      </rect>
-     </property>
-     <property name="minimum">
-      <number>-50</number>
-     </property>
-     <property name="maximum">
-      <number>50</number>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-    </widget>
-    <widget class="QLCDNumber" name="lcdNumber_left">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>80</width>
-       <height>50</height>
-      </rect>
-     </property>
-     <property name="digitCount">
-      <number>3</number>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QFrame" name="frame_right">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>20</y>
-      <width>100</width>
-      <height>350</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QSlider" name="verticalSlider_right">
-     <property name="geometry">
-      <rect>
-       <x>25</x>
-       <y>80</y>
-       <width>50</width>
-       <height>250</height>
-      </rect>
-     </property>
-     <property name="minimum">
-      <number>-50</number>
-     </property>
-     <property name="maximum">
-      <number>50</number>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-    </widget>
-    <widget class="QLCDNumber" name="lcdNumber_right">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>80</width>
-       <height>50</height>
-      </rect>
-     </property>
-     <property name="digitCount">
-      <number>3</number>
-     </property>
-    </widget>
-   </widget>
    <widget class="QFrame" name="frame_button_control">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>30</y>
-      <width>481</width>
-      <height>391</height>
+      <x>10</x>
+      <y>10</y>
+      <width>451</width>
+      <height>361</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -132,7 +36,7 @@
     <widget class="QPushButton" name="pushButton_up">
      <property name="geometry">
       <rect>
-       <x>80</x>
+       <x>130</x>
        <y>30</y>
        <width>100</width>
        <height>100</height>
@@ -170,10 +74,10 @@
     <widget class="QFrame" name="frame_val">
      <property name="geometry">
       <rect>
-       <x>270</x>
-       <y>30</y>
+       <x>240</x>
+       <y>5</y>
        <width>200</width>
-       <height>130</height>
+       <height>125</height>
       </rect>
      </property>
      <property name="frameShape">
@@ -260,7 +164,7 @@
     <widget class="QPushButton" name="pushButton_down">
      <property name="geometry">
       <rect>
-       <x>80</x>
+       <x>130</x>
        <y>250</y>
        <width>100</width>
        <height>100</height>
@@ -279,7 +183,7 @@
     <widget class="QPushButton" name="pushButton_right">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>240</x>
        <y>140</y>
        <width>100</width>
        <height>100</height>
@@ -295,6 +199,19 @@
       </size>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_stop">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>140</y>
+       <width>100</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -302,7 +219,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>793</width>
+     <width>470</width>
      <height>28</height>
     </rect>
    </property>
