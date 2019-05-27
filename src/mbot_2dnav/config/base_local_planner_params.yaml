@@ -3,7 +3,7 @@ recovery_behavior_enabled: true
 clearing_rotation_allowed: true
 
 TrajectoryPlannerROS:  
-  max_vel_x: 0.2
+  max_vel_x: 0.15
   min_vel_x: 0.05
   max_vel_y: 0
   min_vel_y: 0

@@ -1,7 +1,7 @@
 mbot:
   # Publish all joint states -----------------------------------
   joint_state_controller:
-    type: joint_state_controller/JointStateController
+    type: "joint_state_controller/JointStateController"
     publish_rate: 50  
 
   mobile_base_controller:
@@ -15,7 +15,7 @@ mbot:
     # Wheel separation and diameter. These are both optional.
     # diff_drive_controller will attempt to read either one or both from the
     # URDF if not specified as a parameter
-    wheel_separation : 0.3900
+    wheel_separation : 0.362
     wheel_radius : 0.0625
 
     # Wheel separation and radius multipliers

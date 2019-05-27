@@ -38,7 +38,7 @@
       <origin rpy="0 3.14159265359 1.57079632679" xyz="0.203 0.203 0.196 "/>
     </collision>
     <inertial>
-      <mass value="10.0"/>
+      <mass value="50.0"/>
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
@@ -98,7 +98,7 @@
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
     <inertial>
-      <mass value="10.0"/>
+      <mass value="1.0"/>
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
@@ -118,7 +118,7 @@
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
     <inertial>
-      <mass value="10.0"/>
+      <mass value="1.0"/>
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
@@ -137,7 +137,7 @@
       <origin rpy="1.57079632679 0 1.57079632679" xyz="-0.0095 -0.017 -0.0375"/>
     </collision>
     <inertial>
-      <mass value="10.0"/>
+      <mass value="1.0"/>
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
@@ -156,12 +156,12 @@
       <origin rpy="1.57079632679 0 1.57079632679" xyz="-0.0095 -0.017 -0.0375"/>
     </collision>
     <inertial>
-      <mass value="10.0"/>
+      <mass value="1.0"/>
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
   
-  <link name="front_steering_wheel">
+  <!-- <link name="front_steering_wheel">
     <visual>
       <geometry>
         <cylinder radius="0.0125" length="0.015"/>
@@ -176,7 +176,7 @@
       <origin rpy="0 1.57079632679 0" xyz="0 0 0"/>
     </collision>
     <inertial>
-      <mass value="10.0"/>
+      <mass value="1.0"/>
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
@@ -196,10 +196,10 @@
       <origin rpy="0 1.57079632679 0" xyz="0 0 0"/>
     </collision>
     <inertial>
-      <mass value="10.0"/>
+      <mass value="1.0"/>
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
-  </link>
+  </link> -->
   
   <link name="laser_frame">
     <visual>
@@ -215,7 +215,7 @@
       <origin xyz="0 0 0"/> 
     </collision>
     <inertial>
-      <mass value="10.0"/>
+      <mass value="1.0"/>
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
@@ -293,17 +293,17 @@
     <origin xyz="0 0 0"/>
   </joint>
   
-  <joint name="front_steering_wheel_frame_to_wheel" type="continuous">
+  <!-- <joint name="front_steering_wheel_frame_to_wheel" type="floating">
     <parent link="front_steering_wheel_frame"/>
     <child link="front_steering_wheel"/>
     <origin xyz="0.0 -0.005 -0.0255"/>
   </joint>
   
-  <joint name="back_steering_wheel_frame_to_wheel" type="continuous">
+  <joint name="back_steering_wheel_frame_to_wheel" type="floating">
     <parent link="back_steering_wheel_frame"/>
     <child link="back_steering_wheel"/>
     <origin xyz="0.0 -0.005 -0.0255"/>
-  </joint>
+  </joint> -->
   
   <joint name="body_link_to_laser_frame" type="fixed">
     <parent link="body_link"/>
