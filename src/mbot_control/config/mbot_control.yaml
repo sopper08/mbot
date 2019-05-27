@@ -15,7 +15,7 @@ mbot:
     # Wheel separation and diameter. These are both optional.
     # diff_drive_controller will attempt to read either one or both from the
     # URDF if not specified as a parameter
-    wheel_separation : 0.35070
+    wheel_separation : 0.3900
     wheel_radius : 0.0625
 
     # Wheel separation and radius multipliers
@@ -26,7 +26,7 @@ mbot:
     cmd_vel_timeout: 0.5
 
     # Base frame_id
-    base_frame_id: base_link
+    base_frame_id: base_footprint
 
     # Velocity and acceleration limits
     # Whenever a min_* is unspecified, default to -max_*

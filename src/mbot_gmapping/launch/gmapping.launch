@@ -1,11 +1,12 @@
 <launch>
-  <node name="slam_gmapping" pkg="gmapping" type="slam_gmapping" >
+  <node name="slam_gmapping" pkg="gmapping" type="slam_gmapping">
     <remap from="scan" to="/mbot/laser/scan"/>
-    <remap from="/odom" to="/mbot/mobile_base_controller/odom" />
-    <!-- <param name="base_frame" value="base_link"/> -->
-    <param name="map_update_interval" value="5.0"/>
+    <remap from="odom" to="/mbot/mobile_base_controller/odom"/>
+
+    <param name="base_frame" value="base_footprint"/>
+    <param name="map_update_interval" value="1.0"/>
     <param name="maxUrange" value="6.0"/>
-    <param name="maxRange" value="8.0"/>
+    <param name="maxRange" value="80.0"/>
     <param name="sigma" value="0.05"/>
     <param name="kernelSize" value="1"/>
     <param name="lstep" value="0.05"/>
@@ -20,7 +21,7 @@
     <param name="str" value="0.01"/>
     <param name="stt" value="0.02"/>
     <param name="linearUpdate" value="0.1"/>
-    <param name="angularUpdate" value="10.0"/>
+    <param name="angularUpdate" value="0.1"/>
     <param name="temporalUpdate" value="-1.0"/>
     <param name="resampleThreshold" value="0.5"/>
     <param name="particles" value="100"/>
