@@ -1,24 +1,28 @@
 robot_radius: 0.203
 
-obstacle_layer:
+static_layer:
   enabled: true
-  max_obstacle_height: 0.6
-  min_obstacle_height: 0.0
+  map_topic: /map
+
+obstacle_layer:
+  # Global filtering parameters
+  enabled: true
+  max_obstacle_height: 2.0
   obstacle_range: 2.0
   raytrace_range: 5.0
-  inflation_radius: 0.01
-  combination_method: 1
+  # Sensor management parameters
   observation_sources: laser_scan_sensor
+  laser_scan_sensor: 
+    data_type: LaserScan
+    topic: /mbot/laser/scan
+    marking: true
+    clearing: true
+    expected_update_rate: 0
+  # Obstacle costmap plugin
   track_unknown_space: true
-  laser_scan_sensor: {data_type: LaserScan, topic: /mbot/laser/scan, marking: true, clearing: true, expected_update_rate: 0}
-
-track_unknown_space: true
+  combination_method: 1
 
 inflation_layer:
   enabled: true
-  cost_scaling_factor: 10.0  # exponential rate at which the obstacle cost drops off (default: 10)
-  inflation_radius: 0.20 # max. distance from an obstacle at which costs are incurred for planning paths.
-
-static_layer:
-  enabled: true
-  map_topic: "/map"
+  inflation_radius: 0.18
+  cost_scaling_factor: 20.0
