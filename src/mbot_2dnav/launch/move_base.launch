@@ -3,15 +3,22 @@
   <node name="map_server" pkg="map_server" type="map_server" args="$(find mbot_2dnav)/maps/$(arg map)" />
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base_node" output="screen">
-    <remap from="/cmd_vel" to="/mbot/mobile_base_controller/cmd_vel" />
+    <remap from="/cmd_vel" to="/mbot/mobile_base_controller/raw_cmd_vel" />
     <remap from="/odom" to="/mbot/mobile_base_controller/odom" />
 
-    <param name="footprint_padding" value="0.01" />
-    <param name="controller_frequency" value="10.0" />
-    <param name="controller_patience" value="3.0" />
-
-    <param name="oscillation_timeout" value="30.0" />
-    <param name="oscillation_distance" value="0.5" />
+    <param name="base_global_planner" value="global_planner/GlobalPlanner"/>
+    <param name="controller_frequency" value="20.0"/>
+    <param name="planner_patience" value="5.0"/>
+    <param name="controller_patience" value="10.0"/>
+    <param name="conservative_reset_dist" value="3.0"/>
+    <param name="recovery_behavior_enabled" value="true"/>
+    <param name="clearing_rotation_allowed" value="false"/>
+    <param name="shutdown_costmaps" value="false"/>
+    <param name="oscillation_timeout" value="0.0"/>
+    <param name="oscillation_distance" value="0.5"/>
+    <param name="planner_frequency" value="10"/>
+    <param name="max_planning_retries" value="-1"/>
+    
 
     <rosparam file="$(find mbot_2dnav)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find mbot_2dnav)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
@@ -19,4 +26,6 @@
     <rosparam file="$(find mbot_2dnav)/config/global_costmap_params.yaml" command="load" />
     <rosparam file="$(find mbot_2dnav)/config/base_local_planner_params.yaml" command="load" />
   </node>
+
+  <include file="$(find mbot_2dnav)/launch/smoother.launch" />
 </launch>

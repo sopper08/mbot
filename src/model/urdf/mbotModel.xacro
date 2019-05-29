@@ -33,13 +33,15 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://model/meshes/dashgoD1_body.stl"/>
+        <!-- <mesh filename="package://model/meshes/dashgoD1_body.stl"/> -->
+        <cylinder length="0.158" radius="0.203"/>
       </geometry>
-      <origin rpy="0 3.14159265359 1.57079632679" xyz="0.203 0.203 0.196 "/>
+      <!-- <origin rpy="0 3.14159265359 1.57079632679" xyz="0.203 0.203 0.196 "/> -->
+      <origin rpy="0 0 0" xyz="0 0 0.117 "/>
     </collision>
     <inertial>
-      <mass value="50.0"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <mass value="15.0"/>
+      <inertia ixx="0.352" ixy="0.0" ixz="0.0" iyy="0.352" iyz="0.0" izz="0.309"/>
     </inertial>
   </link>
   
@@ -59,7 +61,7 @@
     </collision>
     <inertial>
       <mass value="10.0"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
     </inertial>
   </link>
   
@@ -79,7 +81,7 @@
     </collision>
     <inertial>
       <mass value="10.0"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
     </inertial>
   </link>
   
@@ -99,7 +101,7 @@
     </collision>
     <inertial>
       <mass value="1.0"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
     </inertial>
   </link>
   
@@ -119,7 +121,7 @@
     </collision>
     <inertial>
       <mass value="1.0"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
     </inertial>
   </link>
   
@@ -138,7 +140,7 @@
     </collision>
     <inertial>
       <mass value="1.0"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
     </inertial>
   </link>
   
@@ -157,11 +159,11 @@
     </collision>
     <inertial>
       <mass value="1.0"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
     </inertial>
   </link>
   
-  <!-- <link name="front_steering_wheel">
+  <link name="front_steering_wheel">
     <visual>
       <geometry>
         <cylinder radius="0.0125" length="0.015"/>
@@ -177,7 +179,7 @@
     </collision>
     <inertial>
       <mass value="1.0"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
     </inertial>
   </link>
   
@@ -197,9 +199,9 @@
     </collision>
     <inertial>
       <mass value="1.0"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
     </inertial>
-  </link> -->
+  </link>
   
   <link name="laser_frame">
     <visual>
@@ -216,7 +218,7 @@
     </collision>
     <inertial>
       <mass value="1.0"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
     </inertial>
   </link>
   
@@ -293,17 +295,17 @@
     <origin xyz="0 0 0"/>
   </joint>
   
-  <!-- <joint name="front_steering_wheel_frame_to_wheel" type="floating">
+  <joint name="front_steering_wheel_frame_to_wheel" type="fixed">
     <parent link="front_steering_wheel_frame"/>
     <child link="front_steering_wheel"/>
     <origin xyz="0.0 -0.005 -0.0255"/>
   </joint>
   
-  <joint name="back_steering_wheel_frame_to_wheel" type="floating">
+  <joint name="back_steering_wheel_frame_to_wheel" type="fixed">
     <parent link="back_steering_wheel_frame"/>
     <child link="back_steering_wheel"/>
     <origin xyz="0.0 -0.005 -0.0255"/>
-  </joint> -->
+  </joint>
   
   <joint name="body_link_to_laser_frame" type="fixed">
     <parent link="body_link"/>
