@@ -112,7 +112,7 @@ if __name__ == '__main__':
         base_frame = rospy.get_param("~base_frame")
     else:
         base_frame = "/base_footprint"
-    
+
     rospy.Subscriber(odom_topic, Odometry, callback)
- 
+
     rospy.spin()

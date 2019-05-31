@@ -22,4 +22,16 @@
     <remap from="/joint_states" to="/mbot/joint_states" />
   </node>
 
+  <!-- add odom noise -->
+  <node name="odom_noise"
+        pkg="mbot_odom_noise"
+        type="odom_noise.py">
+        <rosparam>
+          alpha1: 0.05
+          alpha2: 0.087
+          alpha3: 0.05
+          alpha4: 0.01
+        </rosparam>
+  </node>
+
 </launch>
