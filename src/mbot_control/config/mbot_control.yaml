@@ -50,3 +50,4 @@ mbot:
         max_jerk               : 2.5  # rad/s^3
 
     odom_frame_id: odom
+    enable_odom_tf: false

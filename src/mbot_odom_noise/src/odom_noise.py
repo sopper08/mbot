@@ -81,18 +81,20 @@ if __name__ == '__main__':
         a1 = rospy.get_param("~alpha1")
     else:
         rospy.logwarn("alpha1 is set to default")
-        a1 = 15.0*pi/180.0
+        # a1 = 15.0*pi/180.0
+        a1 = 0.01
     # alpha 2 is degree/m
     if rospy.has_param("~alpha2"):
         a2 = rospy.get_param("~alpha2")
     else:
-        a2 = 15.0*pi/180.0
+        # a2 = 15.0*pi/180.0
+        a2 = 0.01
         rospy.logwarn("alpha2 is set to default")
     # alpha 3 is m/meter
     if rospy.has_param("~alpha3"):
         a3 = rospy.get_param("~alpha3")
     else:
-        a3 = 0.2
+        a3 = 0.01
         rospy.logwarn("alpha3 is set to default")
     # alpha 4 is m/degree
     if rospy.has_param("~alpha4"):

@@ -10,7 +10,8 @@
         respawn="false"
         output="screen" 
         ns="/mbot" 
-        args="joint_state_controller mobile_base_controller"/>
+        args="joint_state_controller mobile_base_controller">
+  </node>
   
   <!-- convert joint states to TF transforms for rviz, etc -->
   <node name="robot_state_publisher" 
