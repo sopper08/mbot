@@ -16,10 +16,9 @@
     <param name="shutdown_costmaps" value="false"/>
     <param name="oscillation_timeout" value="0.0"/>
     <param name="oscillation_distance" value="0.5"/>
-    <param name="planner_frequency" value="10"/>
+    <param name="planner_frequency" value="3"/>
     <param name="max_planning_retries" value="-1"/>
     
-
     <rosparam file="$(find mbot_2dnav)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find mbot_2dnav)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
     <rosparam file="$(find mbot_2dnav)/config/local_costmap_params.yaml" command="load" />

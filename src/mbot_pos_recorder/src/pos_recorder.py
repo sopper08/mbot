@@ -19,7 +19,7 @@ def get_datas(path):
         for msg_tf in msg.transforms:
             tf_transformer.setTransform(msg_tf)
         try: 
-            xy, _ = tf_transformer.lookupTransform('map', 'base_footprint', rospy.Time(0))
+            xy, _ = tf_transformer.lookupTransform('odom', 'base_footprint', rospy.Time(0))
             odom_pos.append({'time': t.to_nsec(),
                             'x': xy[0],
                             'y': xy[1]})
@@ -41,7 +41,7 @@ def get_datas(path):
 def main():
     rospack = rospkg.RosPack()
     pkg_path = rospack.get_path('mbot_pos_recorder')
-    bag_path = pkg_path + '/bags/2019-05-30-11-57-54.bag'
+    bag_path = pkg_path + '/bags/2019-06-02-15-41-48.bag'
 
     odom_pos, real_pos = get_datas(bag_path)
 

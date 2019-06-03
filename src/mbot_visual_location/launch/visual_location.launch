@@ -1,0 +1,10 @@
+<launch>
+  <node name="update_pos_to_rosParam" 
+        pkg="mbot_visual_location" 
+        type="update_pos_to_rosParam.py">
+  </node>
+  <node name="visual_location" 
+        pkg="mbot_visual_location" 
+        type="visual_location.py">
+  </node>
+</launch>

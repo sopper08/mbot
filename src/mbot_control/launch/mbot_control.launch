@@ -27,10 +27,10 @@
         pkg="mbot_odom_noise"
         type="odom_noise.py">
         <rosparam>
-          alpha1: 0.05
+          alpha1: 0.050
           alpha2: 0.087
-          alpha3: 0.05
-          alpha4: 0.01
+          alpha3: 0.050
+          alpha4: 0.010
         </rosparam>
   </node>
 
