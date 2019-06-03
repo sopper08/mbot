@@ -1,10 +1,13 @@
 <launch>
+  <include file="$(find mbot_visual_location)/launch/visual_gmapping.launch" />
   <node name="update_pos_to_rosParam" 
         pkg="mbot_visual_location" 
-        type="update_pos_to_rosParam.py">
+        type="update_pos_to_rosParam.py"
+        output="screen">
   </node>
   <node name="visual_location" 
         pkg="mbot_visual_location" 
-        type="visual_location.py">
+        type="visual_location.py"
+        output="screen">
   </node>
 </launch>
