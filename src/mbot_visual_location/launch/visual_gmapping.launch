@@ -2,11 +2,11 @@
   <node name="slam_gmapping" pkg="gmapping" type="slam_gmapping">
     <remap from="scan" to="/mbot/laser/scan"/>
     <remap from="odom" to="/mbot/mobile_base_controller/odom"/>
-    <remap from="map" to="visual_map"/>
-    <remap from="map_metadata" to="visual_map_metadata"/>
-    <remap from="~entropy" to="~visual_entropy"/>
+    <!-- <remap from="map" to="visual_map"/> -->
+    <!-- <remap from="map_metadata" to="visual_map_metadata"/> -->
+    <!-- <remap from="~entropy" to="~visual_entropy"/> -->
     
-    <param name="map_frame" value="visual_map"/>
+    <!-- <param name="map_frame" value="visual_map"/> -->
     <param name="base_frame" value="base_footprint"/>
     <param name="map_update_interval" value="1.0"/>
     <param name="maxUrange" value="8.0"/>

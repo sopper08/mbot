@@ -23,7 +23,7 @@
   </node>
 
   <!-- add odom noise -->
-  <!-- <node name="odom_noise"
+  <node name="odom_noise"
         pkg="mbot_odom_noise"
         type="odom_noise.py">
         <rosparam>
@@ -32,6 +32,6 @@
           alpha3: 0.050
           alpha4: 0.010
         </rosparam>
-  </node> -->
+  </node>
 
 </launch>
