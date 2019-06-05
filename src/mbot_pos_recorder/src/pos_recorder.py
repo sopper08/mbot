@@ -44,7 +44,7 @@ def get_datas(path):
 def main():
     rospack = rospkg.RosPack()
     pkg_path = rospack.get_path('mbot_pos_recorder')
-    bag_path = pkg_path + '/bags/2019-06-04-04-51-26.bag'
+    bag_path = pkg_path + '/bags/2019-06-04-19-45-32.bag'
 
     odom_pos, real_pos = get_datas(bag_path)
 
